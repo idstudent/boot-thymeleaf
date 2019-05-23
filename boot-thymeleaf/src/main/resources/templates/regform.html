@@ -4,18 +4,19 @@
 <head>
     <title>등록 폼</title>
     <th:block th:include="fragments/header"></th:block>
+    <script type="text/javascript" src="/js/main.js"></script>
 </head>
 <body>
 <th:block th:include="fragments/nav"></th:block>
-
 <div class="container" style="min-height: 500px">
 
     <div class="starter-template">
-        <h1>Spring Boot AJAX Example</h1>
+        <h1>사용자 등록 폼</h1>
 
         <div id="feedback"></div>
-
-        <form class="form-horizontal" id="regform">
+		<!--  
+        <form class="form-horizontal" id="regform">-->
+        <form th:action="@{'/users'}" th:method="post">
             <div class="form-group form-group-lg">
                 <label class="col-sm-2 control-label">Name</label>
                 <div class="col-sm-10">
@@ -41,11 +42,7 @@
 
 </div>
 
-<div class="container">
 <th:block th:include="fragments/footer"></th:block>
-
-</div>
-
 
 </body>
 </html>
