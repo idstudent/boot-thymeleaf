@@ -11,7 +11,7 @@ $(document).ready(function () {
     });
     
     $("#updateform").submit(function (event) {
-        event.preventDefault();
+        event.preventDefault(); 
         update_ajax_submit();
     });
 

@@ -19,7 +19,7 @@ import idu.cs.exception.ResourceNotFoundException;
 import idu.cs.repository.UserRepository;
 
 @Controller
-public class HomeController {
+public class HomeController { 
 @Autowired UserRepository userRepo; // Dependency Injection
 	
 	@GetMapping("/test")
