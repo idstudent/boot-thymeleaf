@@ -48,7 +48,7 @@ public class HomeController {
 	@GetMapping("/users/nameasc") 
 	public String getUsersByNameAsc(@Param(value = "name") String name, Model model) {
 		List<User> users = userRepo.findByNameOrderByIdAsc(name);
-		model.addAttribute("users", users);
+		model.addAttribute("users", users); 
 		return "userlist";
 	}
 	@GetMapping("/users/{id}")
