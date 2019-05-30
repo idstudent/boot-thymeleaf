@@ -1,6 +1,7 @@
 
 package idu.cs.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +15,10 @@ public class User {
 	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id; 
 	// database에서 sequence number, primary key 역할
-	
+	@Column(nullable=false, length=20, unique=true)
+	private String userId;
+	@Column(nullable=false)
+	private String userPw;
 	private String name;
 	private String company;
 	
@@ -35,5 +39,17 @@ public class User {
 	}
 	public void setCompany(String company) {
 		this.company = company;
+	}
+	public String getUserPw() {
+		return userPw;
+	}
+	public void setUserPw(String uesrPw) {
+		this.userPw = uesrPw;
+	}
+	public String getUserId() {
+		return userId;
+	}
+	public void setUserId(String userId) {
+		this.userId = userId;
 	}
 }
